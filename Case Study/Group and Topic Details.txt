@@ -1,0 +1,33 @@
+Employee Travel Requisition
+Net Banking Project End to End
+Recruitment Portal
+
+Group 1 Topic :: Employee Travel Requisition
+Bhagyashri
+Akashay
+Surbhi
+Vaibhav
+
+Group 2 Topic :: Recruitment Portal
+Siddhesh
+Sweta
+Rupesh
+Chandan
+
+Group 3 Topic :: Net Banking Project End to End
+Saurabh
+Vaishnavi
+Shubham
+Nizam
+
+Group 4 Topic :: Recruitment Portal
+Samruddhi
+Amardeep
+Mayuri
+Adil
+
+Group 5 Topic :: Employee Travel Requisition
+Ashwini
+Wajir
+Yogita
+Tejas
