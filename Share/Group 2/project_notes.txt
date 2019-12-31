@@ -1,0 +1,43 @@
+create table employee_master(employee_id int primary key,
+name varchar(30) NOT NULL,contact number(15) NOT NULL,designation varchar(30) NOT NULL,
+qualification varchar(40) NOT NULL,address varchar(40) NOT NULL,email varchar(40) NOT NULL,
+skills varchar(50) NOT NULL,status varchar(30) NOT NULL,created_on TIMESTAMP NOT NULL, updated_on TIMESTAMP NOT NULL);
+
+insert into employee_master(employee_id,name,contact,designation,
+qualification,address,email,skills,status,created_on,updated_on)
+values(101,'rupesh','8898713725','Developer','mca','mumbai','abc@gmail.com','java','selected',TO_DATE('2016-02-12 11:12:34','YYYY-MM-DD HH:MI:SS'),TO_DATE('2016-01-12 05:12:34','YYYY-MM-DD HH:MI:SS'));
+
+------------------------------------------------------------------------------
+
+create table candidate_master(candidate_id number(10) primary key,name varchar(30) NOT NULL,location varchar(30) NOT NULL,
+contact number(15) NOT NULL,email varchar(40) NOT NULL,qualification varchar(40) NOT NULL,
+skills varchar(50) NOT NULL,certification varchar(40) NOT NULL,status varchar(30) NOT NULL, created_on TIMESTAMP NOT NULL, updated_on TIMESTAMP NOT NULL);
+
+insert into candidate_master(candidate_id,name,location,contact,email,qualification,
+skills,certification,status,created_on,updated_on)values(1001, 'rupesh', 'mumbai', '8898776767', 'xyz@gmail.com', 'BE', '.Net', 'java certified', 'selected', TO_DATE('2016-02-12 11:12:34','YYYY-MM-DD HH:MI:SS'), TO_DATE('2016-01-12 05:12:34','YYYY-MM-DD HH:MI:SS'));
+
+----------------------------------------------------------------------------------
+
+create table assessment_master(assessment_id number(10) primary key,candidate_id int NOT NULL, hr_round_rating number(10) NOT NULL,technical_rating number(10) NOT NULL,
+communication_rating number(10) NOT NULL,gd_round_rating number(10) NOT NULL,aptitute_round_rating number(10) NOT NULL,
+overall_round_rating number(10) NOT NULL,status varchar(30) NOT NULL,created_on TIMESTAMP NOT NULL, updated_on TIMESTAMP NOT NULL, FOREIGN KEY(candidate_id) REFERENCES candidate_master(candidate_id));
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(501,1001,3,5,4,3,4,4,'not selected');
+
+
+------------------------------------------------------------
+
+create table request_master(request_id number(10) primary key,job_description
+varchar(40) NOT NULL,required_qualification varchar(40) NOT NULL,required_skillset
+varchar(40) NOT NULL,experience varchar(30) NOT NULL,resource_required number(20) NOT NULL,
+recruited number(20) NOT NULL,status varchar(30) NOT NULL,created_on TIMESTAMP NOT NULL,
+  updated_on TIMESTAMP NOT NULL);
+
+
+
+set lines 600 pages 200
+
+ALTER TABLE employee_master ADD created_on TIMESTAMP;
+ALTER TABLE employee_master ADD updated_on TIMESTAMP;
+
