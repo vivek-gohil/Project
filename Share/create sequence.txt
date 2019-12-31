@@ -1,0 +1,70 @@
+SQL>
+SQL>
+SQL> CREATE TABLE test (
+  2       record_id   NUMBER(18,0),
+  3       record_text VARCHAR2(10)
+  4  );
+
+Table created.
+
+SQL>
+SQL> CREATE SEQUENCE test_seq;
+
+Sequence created.
+
+SQL>
+SQL> SELECT test_seq.nextval FROM DUAL;
+
+   NEXTVAL
+----------
+         1
+
+SQL> SELECT test_seq.nextval FROM DUAL;
+
+   NEXTVAL
+----------
+         2
+
+SQL> SELECT test_seq.nextval FROM DUAL;
+
+   NEXTVAL
+----------
+         3
+
+SQL>
+SQL>
+SQL> INSERT INTO test VALUES (
+  2       test_seq.nextval,
+  3       'Record A'
+  4  );
+
+1 row created.
+
+SQL>
+SQL> INSERT INTO test VALUES (
+  2       test_seq.nextval,
+  3       'Record B'
+  4  );
+
+1 row created.
+
+SQL>
+SQL> SELECT * FROM test;
+
+ RECORD_ID RECORD_TEX
+---------- ----------
+         4 Record A
+         5 Record B
+
+SQL>
+SQL>
+SQL> DROP SEQUENCE test_seq;
+
+Sequence dropped.
+
+SQL>
+SQL> drop table test;
+
+Table dropped.
+
+SQL>
