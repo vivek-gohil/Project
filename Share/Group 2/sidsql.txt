@@ -1,0 +1,22 @@
+
+
+
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(,2,6,5,4,2,2,'selected');
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(,5,5,5,4,4,4,'selected');
+
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(,2,1,2,2,1,3,'not selected');
+
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(,5,5,1,2,2,2,'not selected');
+
+
+insert into assessment_master(assessment_id, candidate_id, hr_round_rating, technical_rating, communication_rating,
+gd_round_rating, aptitute_round_rating, overall_round_rating, status)values(,2,3,5,5,1,1,' not selected');
+
